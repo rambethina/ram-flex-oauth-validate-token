@@ -1,0 +1,32 @@
+{
+  "title": "ram-flex-oauth-validate-token",
+  "type": "object",
+  "$id": "ram-flex-oauth-validate-token",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "properties": {
+    "tokenExtractor": {
+      "type": "string",
+      "default": "#[dw::core::Strings::substringAfter(attributes.headers['Authorization'], 'Bearer ')]",
+      "format": "dataweaveExpression"
+    },
+    "upstream": {
+      "type": "string"
+    },
+    "host": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "authorization": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tokenExtractor",
+    "upstream",
+    "host",
+    "path",
+    "authorization"
+  ]
+}

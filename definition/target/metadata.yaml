@@ -1,0 +1,4 @@
+#%Policy Definition 0.1
+name: ram-flex-oauth-validate-token
+category: Custom
+providedCharacteristics: []
