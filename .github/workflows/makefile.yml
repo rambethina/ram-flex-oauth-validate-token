@@ -14,14 +14,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: configure
-      run: ./configure
+    # - name: configure
+    #   run: ./configure
 
-    - name: Install dependencies
-      run: make
+    - name: Install dependencies & compile custom policy
+      run: make build
 
-    - name: Run check
-      run: make check
+    - name: Publish custom policy
+      run: make publish
 
-    - name: Run distcheck
-      run: make distcheck
+    - name: Releases custome policy
+      run: make release
